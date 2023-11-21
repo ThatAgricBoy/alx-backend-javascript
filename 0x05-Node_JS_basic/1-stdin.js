@@ -1,24 +1,13 @@
-// 1-stdin.js
+process.stdout.write('Welcome to Holberton School, what is your name?\n');
 
-const readline = require("readline");
+process.stdin.on('readable', () => {
+  const chunk = process.stdin.read();
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
-console.log("Welcome to Holberton School, what is your name?");
-
-rl.on("line", (input) => {
-  if (input.trim() === "exit") {
-    console.log("This important software is now closing");
-    rl.close();
-  } else {
-    console.log(`Your name is: ${input}`);
-    console.log("Welcome to Holberton School, what is your name?");
+  if (chunk) {
+    process.stdout.write(`Your name is: ${chunk}`);
   }
 });
 
-rl.on("close", () => {
-  process.exit(0);
+process.stdin.on('end', () => {
+  process.stdout.write('This important software is now closing\n');
 });
