@@ -1,12 +1,12 @@
 // full_server/server.js
-import express from "express";
-import routes from "./routes";
+import express from 'express';
+import routes from './routes';
 
 const app = express();
 const PORT = 1245;
 
 // Use the routes defined in full_server/routes/index.js
-app.use("/", routes);
+app.use('/', routes);
 
 export default app;
 
@@ -14,7 +14,7 @@ export default app;
 const databaseFilename = process.argv[2];
 
 if (!databaseFilename) {
-  console.error("Error: Database filename not provided.");
+  console.error('Error: Database filename not provided.');
   process.exit(1);
 }
 

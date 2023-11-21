@@ -1,7 +1,7 @@
 // full_server/utils.js
 import fs from 'fs/promises';
 
-async function readDatabase(filePath) {
+async function readDatabase (filePath) {
   try {
     const data = await fs.readFile(filePath, 'utf8');
     // Parse and process the database file data
@@ -12,7 +12,7 @@ async function readDatabase(filePath) {
   }
 }
 
-function processData(data) {
+function processData (data) {
   const lines = data.split('\n');
   const result = {};
 
