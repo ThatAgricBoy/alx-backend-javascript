@@ -18,7 +18,7 @@ function processData(data) {
 
   // Skip the header line
   for (let i = 1; i < lines.length; i++) {
-    const [firstName, field] = lines[i].split(',');
+    const [firstName, lastName, age, field] = lines[i].split(',');
 
     if (!result[field]) {
       result[field] = [];
