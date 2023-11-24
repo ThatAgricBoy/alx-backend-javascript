@@ -1,17 +1,18 @@
 {
   "name": "0x06-unittests_in_js",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "ALX-SE Projects for unittests in JavaScript.",
+  "main": "0-calcul.js",
   "scripts": {
-    "test": "mocha '*.test.js'"
+    "test": "./node_modules/mocha/bin/mocha"
   },
-  "author": "",
+  "keywords": [],
+  "author": "Abiodun Shittu",
   "license": "ISC",
-  "dependencies": {
-    "mocha": "^10.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "chai": "^4.3.7"
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "sinon": "^15.1.2"
   }
 }
